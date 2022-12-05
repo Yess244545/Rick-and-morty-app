@@ -1,0 +1,200 @@
+html{
+    overflow-x: hidden;
+    background-color: #05292E;
+    
+}
+.App{
+    font-family: "Roboto";
+    width: 100%;
+    position: relative;
+    padding: 0;
+}
+
+.form {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+}
+
+.form input {
+    width: 90%;
+    height: 30px;
+    margin: 0.5rem;    
+}
+
+.form button {
+    padding: 0.5em 1em;
+    border: none;
+    background: rgb(100, 200, 255);
+    cursor: pointer;
+}
+.contenedor{
+    position: relative;
+    display: inline-block;
+    text-align: center;
+}
+
+.img{
+    width: 100%;
+}
+
+.desplegable {
+    color: antiquewhite;
+    list-style: none; 
+    cursor: pointer;  
+}
+
+.locationInfo{
+    background-color: #062226 ;
+    list-style: none;
+    padding: 15px;
+    color: white;
+    display: grid;
+    place-content: center;
+    box-sizing: border-box;
+    width: 100%;
+}
+.locationInfo> h1{
+    color: aqua;
+    display: grid;
+    place-content: center; 
+}
+.locationInfo >ul{
+    list-style: none;
+    display: flex;
+    gap: 10px 100px;
+    font-size: 20px;  
+    flex-wrap: wrap;  
+}
+.locationInfo >ul>li>span{
+    color: yellow;
+    font-size: 22px;
+}
+
+.location-residents{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: center;
+}
+
+.resident-card{
+    background-color: #062226;
+    color: white;
+    
+}
+.imgt{
+    gap: 2rem;
+}
+
+.resident-card_header{
+    position: relative;
+}
+
+.resident-card_status{
+    position: absolute;
+    top: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 5px 10px;
+    background-color: #062226;
+    border-end-end-radius: 20px;
+    border-top-right-radius: 20px;
+}
+.circle {
+    width: 5px;
+    aspect-ratio: 1;
+    
+    border-radius: 50%;
+}
+.circle.Alive {
+    background-color: greenyellow;
+}
+.circle.Dead {
+    background-color: red;
+}
+.circle.unknown{
+    background-color: blue;
+}
+
+
+.resident-card-body{
+    padding: 15px;
+
+}
+.resident-card-body >ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.resident-card-body >ul >li{
+    display: flex;
+    flex-direction: column;
+    
+}
+.resident-card-body >ul >li >span{
+    color: #7E7E7E;
+
+}
+
+.errorMessage{
+    background-color: red;
+    padding:  5px 15px;
+    width: max-content;
+    color: fff;
+    border-radius: 5px;    
+    position: absolute;
+    top: 0;
+    right: 0 ;
+    right: -100%;
+    animation: 0.3s ease-in forwards showError;
+}
+
+.errorMessage p{
+    margin: 0;
+}
+@keyframes showError {
+    0%{right: -100%;}
+    50%{right: -50%;}
+    100%{right: 10px;}
+    
+}
+/*---------------------*/
+/*---------------------*/
+.des {
+    display: inline-block;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    
+  }
+  .desplegable{
+    display: none;
+    position: absolute;
+    width: 100%;
+    overflow: auto;
+    box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.4);
+  }
+  .des:hover .desplegable {
+    display: block;
+  }
+  .desplegable li {
+    display: block;
+    color: #000000;
+    padding: 5px;
+    text-decoration: none;
+  }
+  .desplegable li:hover {
+    color: #FFFFFF;
+    background-color: #00A4BD;
+  }
