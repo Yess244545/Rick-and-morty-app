@@ -16,17 +16,12 @@ const LocationFilter = ({locationName, getNewLocation}) => {
     
     
   return (
-    <div className='des'>
-      <a href="">__________________________________________</a>
-      <div className='desplegable'>
+      <ul className='desplegable'>
         {
             locationsOptions?.map(locationOption=> <li onClick={()=> getNewLocation(locationOption.url, locationOption.name)} key={locationOption.url}>{locationOption.name}</li> )
                 
         }
-    </div>
-    </div>
-      
-    
+    </ul>
     
   )
 }

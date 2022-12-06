@@ -10,29 +10,6 @@ html{
     padding: 0;
 }
 
-.form {
-    width: 100%;
-    max-width: 600px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-    
-}
-
-.form input {
-    width: 90%;
-    height: 30px;
-    margin: 0.5rem;    
-}
-
-.form button {
-    padding: 0.5em 1em;
-    border: none;
-    background: rgb(100, 200, 255);
-    cursor: pointer;
-}
 .contenedor{
     position: relative;
     display: inline-block;
@@ -170,31 +147,67 @@ html{
     
 }
 /*---------------------*/
-/*---------------------*/
-.des {
-    display: inline-block;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    
-  }
-  .desplegable{
-    display: none;
+
+
+.btnup{
     position: absolute;
+    right: 10px;
+    bottom: 10px;
+    font-size: 10px;
+    position: fixed;
+    color: #000000;
+}
+/*---------------------*/
+.search{
+    position: relative;
+    width: max-content;
+
+}
+.filter{
+    position: absolute;
+    top: 50px;
     width: 100%;
+    background-color: #05292E;
+    z-index: 2;
     overflow: auto;
-    box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.4);
-  }
-  .des:hover .desplegable {
+    display: none;
+   box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.4);
+   
+}
+.input{
+    width:100%;
+    border: none;
+    border-bottom: 2px solid black;
+    padding: 8px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border-radius: 5px;
+    background-color: #def;
+    font-size: 16px;
+    
+     
+
+}
+.search:hover .filter {
     display: block;
   }
-  .desplegable li {
+  .filter li {
     display: block;
     color: #000000;
     padding: 5px;
-    text-decoration: none;
+    
   }
-  .desplegable li:hover {
+  .filter li:hover {
     color: #FFFFFF;
     background-color: #00A4BD;
   }
+.form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    height: 30px;
+    padding: 15px;
+}

@@ -58,20 +58,27 @@ function App() {
 
   return (
     <div className="App">
-      <div className='contenedor'>
       <img className='img' src="https://www.realitytitbit.com/static/uploads/26/2019/01/RickandMorty_COVER_S2_1920X1080-1920x576.jpg" alt="" />
-      <form className='form' onSubmit={handleSubmnit}>
-        <input id='searchValue' value={locationName} type="text" onChange={handleChangeInput} placeholder='Escribir algo '/>
-        <button type='submit'>Search</button>
-        {
-          showError ? <ErrorMessage /> : ""
-        }
-      </form>
-      </div>
-      
+      <form id='up' className='form' onSubmit={handleSubmnit}>
+
+        <div className='search'>
+        <input className='input' id='searchValue' value={locationName} type="text" onChange={handleChangeInput} placeholder='Search '/>
+        
+        <div className='filter'>
       <LocationFilter locationName={locationName} getNewLocation={getNewLocation}/>
+      </div>
+        
+        </div>
+        
+      </form>
+
+      
       <LocationInfo  location={location}/>
       <ResidentList location={location}/>
+
+<button className='btnup'>
+<a href="#up"> ↑ </a>
+</button>
       
     </div>
   )
